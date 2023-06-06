@@ -10,13 +10,13 @@ const getData = async () =>{
 const Loader = () => <div id="loader">Loading...</div>
 const App = () => {
   const [todos,setTodos] = useState([])
-  const [Loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   useEffect(()=>{
-    getData().then(data=> {
+    getData().then((data)=> {
       setTodos(data)
       setLoading(false)
-     })
-  },[])
+     });
+  },[]);
   return (
     <div id="main">
       {
@@ -29,3 +29,4 @@ const App = () => {
 
 
 export default App;
+
